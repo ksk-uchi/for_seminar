@@ -1,0 +1,93 @@
+====================================
+JavaScript Syntax questions
+====================================
+
+DATE
+==========
+
+2013.06.22
+
+NAME
+===========
+
+
+
+1. 実行結果を答える
+=====================
+
+:1_1:
+
+alert("Hello");
+
+:1_2:
+
+console.log(123);
+
+:1_3:
+
+var a = 10;
+console.log(a * 7);
+
+:1_4:
+
+var first = "hello",
+    second = "world";
+
+console.log(first + second);
+
+:1_5:
+
+var num = 3,
+    arr = ["red", "green", "blue", "yellow", "pink"];
+
+alert(arr[num]);
+
+:1_6:
+
+var num = 2,
+    arr1 = [1, 2, 3, 4, 5, 6],
+    arr2 = [5, 4, 3, 2, 1, 0];
+
+console.log(arr2[arr1[num]]);
+
+:1_7:
+
+var judge = ["even", "odd"],
+    makeEven = {
+        even: 0,
+        odd: 1
+    }
+
+console.log(21 + makeEven[jedge[21 % 2]]);
+console.log(50 + makeEven[jedge[50 % 2]]);
+
+:1_8:
+
+console.log(1 + 2 + 3 + 4 + "5");
+
+:1_9:
+
+var square = {
+        height: 200,
+        width: 100
+    }
+
+square.area = square.height + square.width;
+console.log(square.area);
+
+delete square.area;
+console.log(square);
+
+square.area = square.height * square.width;
+console.log(square.area);
+
+:1_10:
+
+console.log(456/* + */789);
+
+2. 結果からプログラムを導く
+==============================
+
+
+3. 正誤問題
+===============
