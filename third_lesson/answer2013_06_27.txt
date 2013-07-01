@@ -1,0 +1,179 @@
+=====================
+Answer
+=====================
+
+
+2. プログラムを作るの解答
+==============================
+
+:2_1:
+
+25 * 4 の結果を出力する
+
+// answer
+/*
+console.log(25 * 4);
+*/
+
+:2_2:
+
+自分の姓・名をそれぞれ変数に代入し、結合して出力する
+
+// answer
+/*
+var first_name = "圭佑",
+    last_name = "内村 ";
+console.log(last_name + first_name);
+*/
+
+:2_3:
+
++===========+============+============+============+
+|   name    |   kokugo   |    math    |  english   |
++===========+============+============+============+
+|   bob     |     20     |     78     |     98     |
++===========+============+============+============+
+
+上記の構造をオブジェクトで表現する
+
+// answer
+/*
+var result = {
+        name: "bob",
+        kokugo: 20,
+        math: 78,
+        english: 98
+    };
+*/
+
+:2_4:
+
++===========+============+============+============+
+|   name    |   kokugo   |    math    |  english   |
++===========+============+============+============+
+|   bob     |     20     |     78     |     98     |
+|-----------+------------+------------+------------|
+|   kenji   |     65     |     32     |     43     |
+|-----------+------------+------------+------------|
+|   kumi    |     87     |     91     |     90     |
+|-----------+------------+------------+------------|
+|   eri     |     67     |     55     |     67     |
++===========+============+============+============+
+
+上記の構造を配列とオブジェクトで表現する
+
+// answer
+/*
+var results = [{
+        name: "bob",
+        kokugo: 20,
+        math: 78,
+        english: 98
+    }, {
+        name: "kenji",
+        kokugo: 65,
+        math: 32,
+        english: 43
+    }, {
+        name: "kumi",
+        kokugo: 87,
+        math: 91,
+        english: 90
+    }, {
+        name: "eri",
+        kokugo: 67,
+        math: 55,
+        english: 67
+    }];
+*/
+
+:2_5:
+
+2_4の構造で、各生徒のそれぞれの平均点を出力する
+
+// answer
+/*
+var bob_ave = (results[0].kokugo + results[0].math + results[0].english) / 3,
+    kenji_ave = (results[1].kokugo + results[1].math + results[1].english) / 3,
+    kumi_ave = (results[2].kokugo + results[2].math + results[2].english) / 3,
+    eri_ave = (results[3].kokugo + results[3].math + results[3].english) / 3;
+
+console.log("bob: " + bob_ave);
+console.log("kenji: " + kenji_ave);
+console.log("kumi: " + kumi_ave);
+console.log("eri: " + eri_ave);
+*/
+
+:2_6:
+
+2_4の構造で、eriの点数が、
+国語が奇数でかつ、算数が奇数でかつ、英語が奇数である事を出力する
+
+// answer
+/*
+// results[1]は eri
+var kokugo_judge = ((results[3].kokugo % 2) === 1),
+    math_judge = ((results[3].math % 2) === 1),
+    english_judge = ((results[3].english % 2) === 1);
+
+console.log(kokugo_judge && math_judge && english_judge);
+*/
+
+:2_7:
+
+2_4の構造で、kenjiの点数が、
+国語が奇数かまたは、算数が奇数かまたは、英語が奇数である事を出力する
+
+// answer
+/*
+// results[1]は kenji
+var kokugo_judge = ((results[1].kokugo % 2) === 1),
+    math_judge = ((results[1].math % 2) === 1),
+    english_judge = ((results[1].english % 2) === 1);
+
+console.log(kokugo_judge && math_judge && english_judge);
+*/
+
+:2_8:
+
+高さを表す変数と底辺を表す変数を用意し、
+三角形の面積を出力する。
+その時、出力を行う文の一行上に「三角形の面積は（底辺 * 高さ）/ 2 で求める。」というコメントを入れる
+
+// answer
+/*
+var height = 20,
+    width = 10;
+
+// 三角形の面積は（底辺 * 高さ）/ 2 で求める。
+var triangle_area = (height * width) / 2
+console.log(triangle_area);
+*/
+
+:2_9:
+
+trueの否定を出力する
+
+// answer
+/*
+console.log(!true);
+*/
+
+:2_10:
+
+trueを出力する式を3つ、
+falseを出力する式を3つ作る
+
+// answer
+/*
+// true が出るやつ
+console.log("1: ", !false);
+console.log("2: ", 50 <= 50);
+console.log("3: ", false || (10 <= 50) || false);
+
+// false が出るやつ
+console.log("4: ", !!false);
+console.log("5: ", 50 < 50);
+console.log("6: ", true && (50 < 50) && true);
+*/
+
