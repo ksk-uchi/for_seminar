@@ -1,0 +1,148 @@
+=====================
+Answer
+=====================
+
+下記に解答を記します。
+ただ、あくまで一例であり、
+提示した内容の他にも解答はありますので、
+参考程度に見ていただきたく思います。
+
+
+1. if 文
+============
+
+:1_1:
+
+var month_list = ["1", "2", "3",
+                  "4", "5",
+                  "7", "8", "9",
+                  "10", "11", "12"];
+
+if (month_list.length === 12) {
+    console.log("全部あります");
+} else {
+    console.log("足りません");
+}
+
+上記を実行した時に何が出力されますか？
+
+// answerは省略します。
+
+
+:1_2:
+
+var i = ○
+
+もし、iの値が20よりも大きければ"大"と出力し、
+20以下であれば、奇数の時は"小奇数"、偶数の時は"小偶数"と出力する
+if 文を書こう
+
+// answer
+if (i > 20) {
+    console.log("大");
+} else if (i % 2 == 1) {
+    console.log("小奇数");
+} else {
+    console.log("小偶数");
+}
+
+2. for 文
+============
+
+:2_1:
+
+for文を使ってループを20回まわし、
+[1, 2, 3, ..., 20]という配列を作成し、
+作った配列を更にfor 文を使って、
+20
+19
+18
+...
+と逆順に出力してみよう
+
+//answer
+var res = []
+for (var i = 0; i < 20; i = i + 1) {
+    res[i] = i + 1;
+}
+
+for (var i = res.length - 1; i >= 0; i = i - 1) {
+    console.log(res[i]);
+}
+
+
+:2_2:
+
+for (var i = 1; i <= 9; i = i + 1) {
+    for (var j = 1; j <= 9; j = j + 1) {
+        console.log(i, j, i * j);
+    }
+}
+
+上記を実行した結果はどのように出力されますか？
+
+// answerは省略します。
+
+
+
+3. 複合
+============
+
+:3_1:
+
+var li_list = [{
+            class: "odd",
+            text: "おはようございます",
+            timing: "morning"
+        },
+        {
+            class: "even",
+            text: "こんにちは",
+            timing: "evening"
+        },
+        {
+            class: "odd",
+            text: "こんばんは",
+            timing: "night"
+        },
+        {
+            class: "even",
+            text: "おやすみなさい",
+            timing: "sleep"
+        }];
+
+for 文を用いて、上記配列「li_list」の各要素の内、
+オブジェクトのclassプロパティが"odd"になっているもののtextプロパティ値のみを出力する
+
+（欲しい結果）
+"おはようございます"
+"こんばんは"
+
+// answer
+for (var i = 0, j = li_list.length; i < j; i = i + 1) {
+    if (li_list[i].class === "odd") {
+        console.log(li_list[i].text);
+    }
+}
+
+
+:3_2:
+
+for 文を2重で回しながら、
+下記のような配列を作成しよう
+
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+// answer
+var res = [];
+
+for (var i = 0; i < 3; i = i + 1) {
+    for (var j = 1; j <= 3; j = j + 1) {
+        if (j == 1) {
+            res[i] = [];
+        }
+        res[i][j - 1] = i * 3 + j;
+    }
+}
+
+console.log(res);
