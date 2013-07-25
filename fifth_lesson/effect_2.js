@@ -1,0 +1,1 @@
+alert(effected_value);

@@ -1,0 +1,3 @@
+(function () {
+// ここにJavaScriptを書こう
+}());

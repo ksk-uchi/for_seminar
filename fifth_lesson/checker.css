@@ -1,0 +1,12 @@
+td {
+    height: 40px;
+    width: 40px;
+}
+
+td.odd {
+    background-color: black;
+}
+
+td.even {
+    background-color: white;
+}
